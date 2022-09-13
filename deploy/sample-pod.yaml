@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+        name: sample-pod
+        labels:
+                name: hello-world-app
+spec:
+        containers:
+                - name: hello-world-app
+                  image: juanpablosgu/hello-world-app
+                  ports:
+                          - containerPort: 4000
+
+
