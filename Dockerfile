@@ -1,6 +1,6 @@
 # syntax = docker/dockerfile:1
-FROM node
+FROM node:12-alpine
 WORKDIR /home/app
 COPY ./ ./
-RUN npm install
+RUN npm install --production
 CMD ["npm", "start"]
