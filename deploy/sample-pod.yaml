@@ -9,5 +9,5 @@ spec:
     - name: hello-world-app
       image: juanpablosgu/hello-world-app
       ports:
-        - containersPort: 4000
+        - containerPort: 4000
 
