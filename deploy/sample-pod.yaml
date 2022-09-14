@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: hello-world-app
-      image: juanpablosgu/hello-world-app:
+      image: juanpablosgu/hello-world-app:latest
       ports:
         - containerPort: 4000
 
