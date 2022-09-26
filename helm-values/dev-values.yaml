@@ -1,0 +1,23 @@
+replicaCount: 2
+
+image:
+  repository: juanpablosgu/hello-world-app
+  pullPolicy: IfNotPresent
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: "simple-app"
+fullnameOverride: "simple-app-chart"
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  hosts:
+    - host: localhost-dev
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+
