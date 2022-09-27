@@ -4,5 +4,5 @@ ingress:
   hosts:
     - host: localhost-dev
       paths:
-        - path: /
+        - path: /testing
           pathType: ImplementationSpecific
