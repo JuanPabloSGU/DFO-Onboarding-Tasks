@@ -33,3 +33,28 @@
 
 - Update host in service deployment to use a different host
 
+## Install Cert-Manager using Helm
+
+- Install cert-manager (https://artifacthub.io/packages/helm/cert-manager/cert-manager) on your cluster using helm.
+- Once installed, change the "prometheus.enabled" value to false and upgrade the installed chart.
+- Put all the commands you used to accomplish this within a bash script in your git repo.
+
+## Install cert-manager using kustomize
+
+- (To be done after the helm chart. Make sure to uninstall the helm chart first before going into this one)
+- In a new folder inside your git repo, put all the necessary files and folders to deploy cert-manager, then deploy it with kustomize.
+- Once deployed, add a kustomize patch to change the value number of replicas from 1 to 2 for the cert-manager deployment. Add this patch to git then apply it to your cluster using kustomize.
+
+## Set up kustomize for your application
+
+- (To be done after the helm chart setup for your application)
+- In your Nodejs application repo, create a new folder and within it, add all the necessary files to deploy your application using kustomize. Once again, it should have different values of replicas and ingress host for the dev environment and test environment. 
+- Deploy your application using kustomize.
+- Make sure to commit all the necessary files.
+
+## Set up a helm chart for your application
+
+- (To be done after the cert-manager helm and kustomize tasks)
+- Instead of using pure yaml for your nodejs application. Create a helm chart to deploy  your application to your local cluster.
+- This helm chart should allow you to install your application into 2 different environments (dev and test). The dev environment should have 2 replicas and the test environment 3 replicas. Each environment should have a different host URL in the ingress.
+- Make sure to commit that helm chart to your git repo.
